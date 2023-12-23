@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="quiz.css">
+    <title>Quiz App</title>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Quiz App</h1> 
+        <div class="choose-one">
+            <h2>Choose One:</h2>
+        </div>
+        <div class="box" id="create-quiz-box" onclick="showCreateQuiz()">
+            <h3>Create Quiz</h3>
+        </div>
+        <div class="box" id="take-quiz-box" onclick="showTakeQuiz()">
+            <h3>Take Quiz</h3>
+        </div>
+
+       
+        <div id="create-quiz-section" style="display: none;">
+            <h2>Create a Quiz</h2>
+            <button type="button" onclick="promptNumberOfQuestions()">Start Quiz Creation</button>
+            <div id="quiz-form" style="display: none;"></div>
+            <button type="button" onclick="saveQuiz()">Submit Quiz</button>
+        </div>
+
+        
+        <div id="take-quiz-section" style="display: none;">
+            <h2>Take a Quiz</h2>
+            <div id="quiz-questions"></div>
+            <button type="button" onclick="submitQuiz()">Submit Quiz</button>
+        </div>
+
+        
+        <div id="source-section" style="display: none;">
+            <h2>Source Code:</h2>
+            <pre id="source-code"></pre>
+        </div>
+    </div>
+
+    <script src="quiz.js"></script>
+</body>
+</html>
